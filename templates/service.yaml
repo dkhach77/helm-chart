@@ -16,6 +16,3 @@ spec:
 service:
   type: NodePort
   port: 80
-
-ingress:
-  enabled: false
