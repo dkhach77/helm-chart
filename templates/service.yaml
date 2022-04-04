@@ -6,12 +6,12 @@ metadata:
     env  : prod
     owner: dkhach
 spec:
+  type: NodePort
   selector:
     project: {{ .Release.Name }}
   ports:
     - name      : {{ .Release.Name }}-listener
       protocol  : TCP
       port      : 80  
-      targetPort: 80  
-  type: NodePort
-  port: 80
+      targetPort: 80
+      nodePort: 30007
